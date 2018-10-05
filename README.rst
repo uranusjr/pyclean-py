@@ -11,7 +11,8 @@ Example usages::
     pyclean src
 
 
-An extra script named ``pyclean.py`` is provided in addition to ``pyclean``,
+
+An extra script named ``py-clean`` is provided in addition to ``pyclean``,
 to avoid command name conflicts with pyclean_ in Debian.
 
 
