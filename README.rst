@@ -2,6 +2,11 @@
 pyclean.py: Clean compiled from a Python project.
 ===============================================================================
 
+To install::
+
+    pip install pyclean.py
+
+
 Example usages::
 
     # Clean files related to "src/pip/__init__.py".

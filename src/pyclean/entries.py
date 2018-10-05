@@ -24,13 +24,14 @@ def find_compiled_files(parent, source_name):
 
     # Look for matching names in __pycache__.
     pycache = os.path.join(parent, "__pycache__")
-    prefix = stem + "."
-    for filename in os.listdir(pycache):
-        if not filename.startswith(prefix):
-            continue
-        if not any(filename.endswith(ext) for ext in COMPILED_EXTENSIONS):
-            continue
-        yield os.path.join(pycache, filename)
+    if os.path.isdir(pycache):
+        prefix = stem + "."
+        for filename in os.listdir(pycache):
+            if not filename.startswith(prefix):
+                continue
+            if not any(filename.endswith(ext) for ext in COMPILED_EXTENSIONS):
+                continue
+            yield os.path.join(pycache, filename)
 
 
 def iter_compiled_files(source):
